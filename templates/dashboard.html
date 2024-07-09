@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/static/image/_icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Dashboard</title>
+</head>
+<body>
+    <nav style="background-color: black;" class="navbar navbar-expand-lg ">
+        <div class="container">
+            <a class="navbar-brand" href="#" style="color: aliceblue;">
+                <img src="/static/image/_icon.png" width="30" height="30" class="d-inline-block align-top" alt="">
+                Flavours of Choice
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a style="color: aliceblue;" class="nav-link" href="index">Home </a>
+                    </li>
+                    <li class="nav-item">
+                        <a style="color: aliceblue;" class="nav-link" href="about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a style="color: aliceblue;" class="nav-link" href="dashboard">Feed<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a style="color: aliceblue;" class="nav-link" href="login">Login</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="caart1">
+    <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+        
+        <ol class="carousel-indicators">
+            <li data-target="#carouselExampleSlidesOnly" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleSlidesOnly" data-slide-to="1"></li>
+            <li data-target="#carouselExampleSlidesOnly" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="d-flex justify-content-center align-items-center" style="height: 400px;">
+                    <img src="static\image\dosa.jpg" class="img-fluid" alt="First Slide">
+                    <div class="carousel-caption d-none d-md-block text-center">
+                        <h5>DOSA</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="d-flex justify-content-center align-items-center" style="height: 400px;">
+                    <img src="static\image\idlii.jpg" class="img-fluid" alt="Second Slide">
+                    <div class="carousel-caption d-none d-md-block text-center">
+                        <h5>IDLY</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="d-flex justify-content-center align-items-center" style="height: 400px;">
+                    <img src="static\image\pongal.jpg" class="img-fluid" alt="Third Slide">
+                    <div class="carousel-caption d-none d-md-block text-center">
+                        <h5>PONGAL</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+      
+    </div>
+    <h1 class="text-center mt-4">INDIAN</h1>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="static\image\biryani.jpg" class="card-img-top" alt="Image 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Biryani </h5>
+                        <p class="card-text">Biryani is a mixed rice dish, mainly popular in South Asia. It is made with rice, some type of meat and spices.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="static\image\tan_chicken.jpg" class="card-img-top" alt="Image 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Tandoori chicken</h5>
+                        <p class="card-text">Bright red tandoori chicken is easy to recognize and harder to forget once you taste the delicious preparation.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="static\image\chicken-tikka.jpg" class="card-img-top" alt="Image 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Chicken tikka masala</h5>
+                        <p class="card-text">Tandoori chicken led to many other dishes that make use of the smoky flavors, spice blend, and yogurt marinade.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-3">
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="static\image\madras-curry.jpg" class="card-img-top" alt="Image 4">
+                    <div class="card-body">
+                        <h5 class="card-title">Madras curry</h5>
+                        <p class="card-text">Madras curry begins with a heavenly blend of ground spices by the same name. As with other well-known Indian dishes, it became popularized by the British, who labeled all curries from the city of Madras </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="static\image\goan-fish.jpg" class="card-img-top" alt="Image 5">
+                    <div class="card-body">
+                        <h5 class="card-title">Goan fish curry</h5>
+                        <p class="card-text">With such a lengthy coastline, it's no surprise that some of the best Indian specialties involve fish. Among the numerous renditions, Goan fish curry is high on the list.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="static\image\dal-makhani.jpg" class="card-img-top" alt="Image 6">
+                    <div class="card-body">
+                        <h5 class="card-title">Dal makhani</h5>
+                        <p class="card-text">Dal makhani is sure to be a favorite for vegetarians and meat eaters alike. It turns out the same cook believed to be responsible for bringing tandoori chicken to our plates is also behind the savory lentil dish. </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <br>
+    <div class="caart1">
+        <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+            
+            <ol class="carousel-indicators">
+                <li data-target="#carouselExampleSlidesOnly" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleSlidesOnly" data-slide-to="1"></li>
+                <li data-target="#carouselExampleSlidesOnly" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="d-flex justify-content-center align-items-center" style="height: 400px;">
+                        <img src="static\image\noodu.jpg" class="img-fluid" alt="First Slide">
+                        <div class="carousel-caption d-none d-md-block text-center">
+                            <h5> Pasta puttanesca</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="d-flex justify-content-center align-items-center" style="height: 400px;">
+                        <img src="static\image\slide_2.png" class="img-fluid" alt="Second Slide">
+                        <div class="carousel-caption d-none d-md-block text-center">
+                            <h5>PIZZA</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="d-flex justify-content-center align-items-center" style="height: 400px;">
+                        <img src="static\image\plate.jpg" class="img-fluid" alt="Third Slide">
+                        <div class="carousel-caption d-none d-md-block text-center">
+                            <h5>Lasaniya</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          
+        </div>
+        <h1 class="text-center mt-4">ITALIAN</h1>
+        <div class="container mt-5">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="static\image\ribollita.jpg" class="card-img-top" alt="Image 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Ribollita</h5>
+                            <p class="card-text">Praised for its tall cypress trees and endless rolling hills, Tuscany is also the source of many hearty dishes, one of which is ribollita, a filling soup that will become your new favorite comfort meal.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="static\image\polenta.jpg" class="card-img-top" alt="Image 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Polenta</h5>
+                            <p class="card-text">A glance at an unassuming pot of polenta might not evoke enthusiasm, but the dish is quite a chameleon.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="static\image\risotto.jpg" class="card-img-top" alt="Image 3">
+                        <div class="card-body">
+                            <h5 class="card-title">Risotto alla Milanese</h5>
+                            <p class="card-text">As far as rice-based dishes go, risotto is certainly a popular option with endless variations, including risotto alla Milanese, so named for its city of origin, Milan. </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-3">
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="static\image\cotoletta.jpg" class="card-img-top" alt="Image 4">
+                        <div class="card-body">
+                            <h5 class="card-title">Cotoletta alla Milanese</h5>
+                            <p class="card-text">Cotoletta alla Milanese certainly looks like a Wiener Schnitzel; in fact, the two dishes possibly stem from the same French preparation from the mid-1700s.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="static\image\osso.jpg" class="card-img-top" alt="Image 5">
+                        <div class="card-body">
+                            <h5 class="card-title">Osso Buco alla Milanese</h5>
+                            <p class="card-text">Osso buco is one of the more familiar meat preparations of Italian cuisine. It's no surprise that it's more common to find the dish named in Italian since the English translation amounts to bone with hole.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="static\image\lasagna.jpg" class="card-img-top" alt="Image 6">
+                        <div class="card-body">
+                            <h5 class="card-title">Lasagna/h5>
+                            <p class="card-text">Although lasagna is well-cemented in Italian menus locally and internationally, it owes its first variations to Greek cuisine.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="caart1">
+            <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+                
+                <ol class="carousel-indicators">
+                    <li data-target="#carouselExampleSlidesOnly" data-slide-to="0" class="active"></li>
+                    <li data-target="#carouselExampleSlidesOnly" data-slide-to="1"></li>
+                    <li data-target="#carouselExampleSlidesOnly" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="d-flex justify-content-center align-items-center" style="height: 400px;">
+                            <img src="static\image\mex.jpg" class="img-fluid" alt="First Slide">
+                            <div class="carousel-caption d-none d-md-block text-center">
+                                <h5>Poblana</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="d-flex justify-content-center align-items-center" style="height: 400px;">
+                            <img src="static\image\slide_4.png" class="img-fluid" alt="Second Slide">
+                            <div class="carousel-caption d-none d-md-block text-center">
+                                <h5>Mexican-pizza</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="d-flex justify-content-center align-items-center" style="height: 400px;">
+                            <img src="static\image\slide_3.png" class="img-fluid" alt="Third Slide">
+                            <div class="carousel-caption d-none d-md-block text-center">
+                                <h5>TACOS</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+              
+            </div>
+            <h1 class="text-center mt-4">MEXICAN</h1>
+            <div class="container mt-5">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img src="static\image\enmolada.jpg" class="card-img-top" alt="Image 1">
+                            <div class="card-body">
+                                <h5 class="card-title">Enmolada</h5>
+                                <p class="card-text">Hailing from Oaxaca, an enmolada is a rolled corn tortilla that's often filled with shredded chicken and cotija cheese, then bathed in black mole and sprinkled with sesame seeds and crumbled cheese.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img src="static\image\posole.jpg" class="card-img-top" alt="Image 2">
+                            <div class="card-body">
+                                <h5 class="card-title">Posole (or Pozole)</h5>
+                                <p class="card-text">The foundation of this hearty soup is hominy (hulled corn kernels, also known as maize), which is simmered with red chiles, aromatic spices, tomatoes, and pork</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img src="static\image\tortas.jpg" class="card-img-top" alt="Image 3">
+                            <div class="card-body">
+                                <h5 class="card-title">Tortas</h5>
+                                <p class="card-text">A torta is a Mexican sandwich that's typically served hot — grilled or pressed — but can be enjoyed cold as well.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img src="static\image\tacos.jpg" class="card-img-top" alt="Image 4">
+                            <div class="card-body">
+                                <h5 class="card-title">Tacos de Papa</h5>
+                                <p class="card-text">Tacos de papa are mashed cumin-spiced potatoes that are stuffed into a corn tortilla and fried until crispy. </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img src="static\image\sopa.jpg" class="card-img-top" alt="Image 5">
+                            <div class="card-body">
+                                <h5 class="card-title">Sopa de Lima</h5>
+                                <p class="card-text">Sopa de lima which hails from the Yucatán — is the regional equivalent of Grandma's chicken soup. It's basically a big bowl of comfort, made with chicken, corn tortillas, avocados, habaneros, and lime.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img src="static\image\cemita.jpg" class="card-img-top" alt="Image 6">
+                            <div class="card-body">
+                                <h5 class="card-title">Cemita Poblana</h5>
+                                <p class="card-text">This regional sandwich from Puebla (southeast of Mexico City) is not your average torta.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <br>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            // Activate the carousel
+            $('.carousel').carousel();
+    
+            // Set interval for carousel to slide every second
+            setInterval(function(){
+                $('.carousel').carousel('next');
+            }, 3000); // Change the interval (in milliseconds) as needed
+        });
+    </script>
+
+        
+<footer style="background-color: black;" class="footer text-white py-4">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 footer-column">
+                <h5>About Us</h5>
+                <p>Our Website provides the recipe for your ingredients.</p>
+            </div>
+            <div class="col-md-3 footer-column">
+                <h5>Services</h5>
+                <ul class="list-unstyled">
+                    <li>Search by Ingredients</li>
+                    <li>Search by Cuisine</li>
+                </ul>
+            </div>
+            <div class="col-md-3 footer-column">
+                <h5>Contact Us</h5>
+                <p>Email: flavours_of_choice@gmail.com</p>
+                <p>Phone: +91 8220248579</p>
+            </div>
+            <div class="col-md-3 footer-column">
+                <h5>Social</h5>
+                <ul class="list-unstyled">
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Twitter</a></li>
+                    <li><a href="#">Instagram</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="icon" href="/static/image/_icon.png"type="image/x-icon">
+    <link rel="stylesheet" href="{{ url_for('static', filename='login.css') }}">
+    <title>Login</title>
+</head>
+<body>
+    <nav style="background-color: black;" class="navbar navbar-expand-lg ">
+        <div class="container">
+            <a class="navbar-brand" href="#" style="color: aliceblue;">
+                <img src="/static/image/_icon.png" width="30" height="30" class="d-inline-block align-top" alt="">
+                Flavours of Choice
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a style="color: aliceblue;" class="nav-link" href="index">Home </a>
+                    </li>
+                    <li class="nav-item">
+                        <a style="color: aliceblue;" class="nav-link" href="about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a style="color: aliceblue;" class="nav-link" href="dashboard">Feed<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a style="color: aliceblue;" class="nav-link" href="login">Login</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+      <div class="container">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <h2 class="text-center text-dark mt-5">Login</h2>
+                <div style="color: green;" class="text-center mb-5 text-success">To Flavours of Choice</div>
+                <div class="card my-5">
+
+                    <!-- Login Form -->
+                    <form class="card-body cardbody-color p-lg-5" id="loginForm" action="login.php" method="POST">
+
+                        <div class="text-center">
+                            <img src="\static\image\_icon.png" class="img-fluid profile-image-pic img-thumbnail rounded-circle my-3"
+                                width="200px" alt="profile">
+                        </div>
+
+                        <div class="mb-3">
+                            <input type="text" class="form-control" id="username" name="username" aria-describedby="emailHelp"
+                                placeholder="User Name" required>
+                        </div>
+                        <div class="mb-3">
+                            <input type="password" class="form-control" id="password" name="password" placeholder="Password" required>
+                        </div>
+                        <div class="text-center"><button type="submit" class="btn btn-color px-5 mb-5 w-100">Login</button></div>
+                        <div id="emailHelp" class="form-text text-center mb-5 text-dark">Not Registered? <a href="#" class="text-dark fw-bold" id="createAccountLink"> Create an Account</a></div>
+                    </form>
+
+                    <!-- Registration Form (Initially Hidden) -->
+                    <form class="card-body cardbody-color p-lg-5" id="registerForm" style="display: none;" action="register.php" method="POST">
+
+                        <div class="text-center">
+                            <img src="\static\image\_icon.png" class="img-fluid profile-image-pic img-thumbnail rounded-circle my-3"
+                                width="200px" alt="profile">
+                        </div>
+
+                        <div class="mb-3">
+                            <input type="text" class="form-control" id="newUsername" name="newUsername" aria-describedby="newEmailHelp"
+                                placeholder="New User Name" required>
+                        </div>
+                        <div class="mb-3">
+                            <input type="email" class="form-control" id="newEmail" name="newEmail" aria-describedby="newEmailHelp"
+                                placeholder="Email" required>
+                        </div>
+                        <div class="mb-3">
+                            <input type="password" class="form-control" id="newPassword" name="newPassword" placeholder="New Password" required>
+                        </div>
+                        <div class="text-center"><button type="submit" class="btn btn-color px-5 mb-5 w-100">Register</button></div>
+                        <div id="newEmailHelp" class="form-text text-center mb-5 text-dark">Already have an account? <a href="#" class="text-dark fw-bold" id="loginLink">Log In</a></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS (optional, if you need JavaScript functionality) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- JavaScript for toggling between login and registration forms -->
+    <script>
+        document.getElementById("createAccountLink").addEventListener("click", function (event) {
+            event.preventDefault();
+            document.getElementById("loginForm").style.display = "none";
+            document.getElementById("registerForm").style.display = "block";
+        });
+
+        document.getElementById("loginLink").addEventListener("click", function (event) {
+            event.preventDefault();
+            document.getElementById("registerForm").style.display = "none";
+            document.getElementById("loginForm").style.display = "block";
+        });
+    </script>
+    
+    
+          </div>
+        </div>
+      </div>
+    
+</body>
+</html>

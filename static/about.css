@@ -1,0 +1,523 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+#top-container{
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    
+    padding: 20px;
+    border-radius: 10px;
+    
+}
+h1 {
+    color: white;
+    font-weight: bold;
+    font-family: Arial, sans-serif; /* Change the font family as needed */
+    text-align: center; /* Center the text */
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+#top-container{
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    
+    padding: 20px;
+    border-radius: 10px;
+    
+}
+h1 {
+    color: white;
+    font-weight: bold;
+    font-family: Arial, sans-serif; /* Change the font family as needed */
+    text-align: center; /* Center the text */
+}
+
+
+.recipe-link {
+    color: blue;
+    text-decoration: none;
+    margin-left: 10px;
+}
+
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+form {
+    text-align: center;
+}
+
+label {
+    font-weight: bold;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 10px;
+}
+.button-style {
+    background-color: #d6d4d0; /* Orange-slightly yellowish */
+    color: #ffffff; /* White text */
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.button-style:hover {
+    background-color: #ffb347; /* Darker shade on hover */
+}
+
+/* Add your existing CSS styles here */
+
+/* Center Alignment */
+.center {
+    text-align: center;
+}
+
+/* Heading Styles */
+.feature-head {
+    font-size: 36px; /* Adjust font size as needed */
+    font-weight: bold; /* Make the heading bold */
+    color: #333; /* Dark gray heading color */
+}
+
+/* Fancy Line Styles */
+.fancy-line {
+    border: none; /* Remove default border */
+    height: 2px; /* Set line height */
+    background-color: #007bff; /* Blue line color */
+    width: 50px; /* Set line width */
+    margin: 20px auto; /* Add margin for center alignment */
+}
+
+
+
+/* Oval Image */
+/* Oval Image */
+.oval-img {
+    display: block;
+    width: 200px; /* Adjust as needed */
+    height: auto;
+    border-radius: 50%; /* Make it an oval shape */
+    margin: auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow for a raised effect */
+}
+
+/* Feature Info Container */
+.feature-info {
+    text-align: center;
+    background-color: rgb(255, 255, 255); /* Semi-transparent black background */
+    color: #000000; /* White text color */
+    padding: 20px; /* Add padding as needed */
+    box-sizing: border-box; /* Include padding in width calculation */
+}
+
+/* Feature Info Heading */
+.feature-info h3 {
+    font-size: 24px; /* Adjust font size as needed */
+    margin-bottom: 10px; /* Add margin below heading */
+}
+
+/* Feature Info Paragraph */
+.feature-info p {
+    font-size: 16px; /* Adjust font size as needed */
+    line-height: 1.5; /* Set line height for better readability */
+}
+
+body, html {
+    height: 100%;
+    margin: 0;
+}
+.video-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.video-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.95; /* Decrease transparency */
+}
+.content-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.navbar-nav .nav-link:hover {
+    text-decoration: underline;
+}
+
+.login-link:hover {
+    border: 1px solid white;
+}
+
+.footer {
+    background-color: black;
+    color: white;
+    padding: 60px 0;
+}
+
+.footer-column {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.footer h5 {
+    margin-bottom: 20px;
+}
+
+.footer p {
+    margin-bottom: 10px;
+}
+
+.footer ul li {
+    margin-bottom: 5px;
+}
+
+.footer ul li a {
+    color: #ccc;
+    text-decoration: none;
+}
+
+.footer ul li a:hover {
+    color: #fff;
+}
+
+.about-section {
+    background-color: #f9f9f9;
+}
+
+.about-image {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Contact Form Styles */
+
+.ftco-section {
+    margin-top: 0%;
+    padding: 0;
+}
+
+.contact-wrap {
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+}
+
+.contact-wrap h3 {
+    color: #333;
+    font-size: 24px;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="subject"],
+.form-group textarea {
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    padding: 12px;
+    width: 100%;
+}
+
+.form-group textarea {
+    resize: none;
+}
+
+.form-group input[type="submit"] {
+    background-color: #ffb347;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    padding: 12px 20px;
+    transition: background-color 0.3s ease;
+}
+
+.form-group input[type="submit"]:hover {
+    background-color: #ffb347;
+}
+
+.info-wrap {
+    border-radius: 10px;
+}
+
+.info-wrap h3 {
+    color: #fff;
+    font-size: 24px;
+}
+
+.dbox {
+    margin-bottom: 20px;
+}
+
+.dbox span {
+    color: #fff;
+    font-weight: 500;
+}
+
+.dbox p {
+    color: #fff;
+    font-size: 16px;
+}
+
+.dbox a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.dbox a:hover {
+    text-decoration: underline;
+}
+
+.eee{
+    padding: 5em;
+}
+
+
+.recipe-link {
+    color: blue;
+    text-decoration: none;
+    margin-left: 10px;
+}
+
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+form {
+    text-align: center;
+}
+
+label {
+    font-weight: bold;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 10px;
+}
+.button-style {
+    background-color: #d6d4d0; /* Orange-slightly yellowish */
+    color: #ffffff; /* White text */
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.button-style:hover {
+    background-color: #ffb347; /* Darker shade on hover */
+}
+
+/* Add your existing CSS styles here */
+
+/* Center Alignment */
+.center {
+    text-align: center;
+}
+
+/* Heading Styles */
+.feature-head {
+    font-size: 36px; /* Adjust font size as needed */
+    font-weight: bold; /* Make the heading bold */
+    color: #333; /* Dark gray heading color */
+}
+
+/* Fancy Line Styles */
+.fancy-line {
+    border: none; /* Remove default border */
+    height: 2px; /* Set line height */
+    background-color: #007bff; /* Blue line color */
+    width: 50px; /* Set line width */
+    margin: 20px auto; /* Add margin for center alignment */
+}
+
+
+
+/* Oval Image */
+/* Oval Image */
+.oval-img {
+    display: block;
+    width: 200px; /* Adjust as needed */
+    height: auto;
+    border-radius: 50%; /* Make it an oval shape */
+    margin: auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow for a raised effect */
+}
+
+/* Feature Info Container */
+.feature-info {
+    text-align: center;
+    background-color: rgb(255, 255, 255); /* Semi-transparent black background */
+    color: #000000; /* White text color */
+    padding: 20px; /* Add padding as needed */
+    box-sizing: border-box; /* Include padding in width calculation */
+}
+
+/* Feature Info Heading */
+.feature-info h3 {
+    font-size: 24px; /* Adjust font size as needed */
+    margin-bottom: 10px; /* Add margin below heading */
+}
+
+/* Feature Info Paragraph */
+.feature-info p {
+    font-size: 16px; /* Adjust font size as needed */
+    line-height: 1.5; /* Set line height for better readability */
+}
+
+body, html {
+    height: 100%;
+    margin: 0;
+}
+.video-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.video-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.95; /* Decrease transparency */
+}
+.content-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.navbar-nav .nav-link:hover {
+    text-decoration: underline;
+}
+
+.login-link:hover {
+    border: 1px solid white;
+}
+
+.footer {
+    background-color: black;
+    color: white;
+    padding: 60px 0;
+}
+
+.footer-column {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.footer h5 {
+    margin-bottom: 20px;
+}
+
+.footer p {
+    margin-bottom: 10px;
+}
+
+.footer ul li {
+    margin-bottom: 5px;
+}
+
+.footer ul li a {
+    color: #ccc;
+    text-decoration: none;
+}
+
+.footer ul li a:hover {
+    color: #fff;
+}
+
+.about-section {
+    background-color: #f9f9f9;
+    padding: 50px 0;
+}
+
+.about-image {
+    max-width: 100%;
+    height: auto;
+}

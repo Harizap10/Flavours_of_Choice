@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Recommendation System</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="icon" href="/static/image/_icon.png"type="image/x-icon">
+    <link rel="stylesheet" href="{{ url_for('static', filename='about.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+        }
+        .video-container {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+        .video-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.95; /* Decrease transparency */
+        }
+        .content-container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+    </style>
+<script>
+function toggleIngredientInput(inputType) {
+    var ingredientsInput = document.getElementById('ingredients-input');
+    var cuisineInput = document.getElementById('cuisine-input');
+    var dietInput = document.getElementById('diet-input'); // Define dietInput variable
+
+    if (inputType === 'ingredients') {
+        ingredientsInput.style.display = 'block';
+        cuisineInput.style.display = 'none';
+        dietInput.style.display = 'none';
+    } else if (inputType === 'cuisine') {
+        ingredientsInput.style.display = 'none';
+        cuisineInput.style.display = 'block';
+        dietInput.style.display = 'none';
+    } else if (inputType === 'diet') {
+        ingredientsInput.style.display = 'none';
+        cuisineInput.style.display = 'none';
+        dietInput.style.display = 'block';
+    }
+}
+
+function findRecipes() {
+    var dietInput = document.getElementById("diet");
+    var selectedDiet = dietInput.options[dietInput.selectedIndex].value;
+    // Set the selected diet as the value of the hidden input field
+    document.getElementById("diet").value = selectedDiet;
+    // Submit the form
+    document.getElementById("diet-input").submit();
+}
+
+</script>
+
+</head>
+<body>
+    <nav style="background-color: black;" class="navbar navbar-expand-lg ">
+        <div class="container"> <!-- Removed text-center class -->
+            <a class="navbar-brand mx-auto" href="#" style="color: aliceblue; font-size: 24px;"> <!-- Added mx-auto class -->
+                <img src="/static/image/_icon.png" width="30" height="30" class="d-inline-block align-top" alt="">
+                Flavours of Choice
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a style="color: aliceblue;" class="nav-link" href="index">Home<span class="sr-only">(current)</span> </a>
+                    </li>
+                    <li class="nav-item">
+                        <a style="color: aliceblue;" class="nav-link" href="about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a style="color: aliceblue;" class="nav-link" href="dashboard">Feed</a>
+                    </li>
+                    <li class="nav-item">
+                        <a style="color: aliceblue;" class="nav-link" href="login">Login</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    
+    <div class="video-container">
+        <video autoplay muted loop id="myVideo" class="video-background">
+            <source src="{{ url_for('static', filename='videos/sample2.mp4') }}" type="video/mp4">
+            Your browser does not support HTML5 video.
+        </video>
+        <div class="container content-container" id="top-container" style="text-align: center; color: aliceblue; margin-top: 0px;">
+            <h1 style="font-size: 50px; margin-bottom: 20px;color: aliceblue;">Your Ingredients Our Recipes!</h1>
+            <h1 style="font-size: 50px; margin-bottom: 50px;color: aliceblue;">How do you want to Search</h1>
+            <button style="color: rgb(255, 255, 255); border: none; border-radius: 10px; margin-right: 10px;" class="button-style" onclick="toggleIngredientInput('ingredients')">BY INGREDIENTS</button>
+            <button style="color: rgb(255, 255, 255); border: none; border-radius: 10px; margin-left: 10px;" class="button-style" onclick="toggleIngredientInput('cuisine')">BY CUISINE</button>
+            <button style="color: rgb(255, 255, 255); border: none; border-radius: 10px; margin-left: 10px;" class="button-style" onclick="toggleIngredientInput('diet')">BY DIET</button>
+    
+            <form action="{{ url_for('recommend') }}" method="POST" id="ingredients-input" style="display: none;">
+                <label for="ingredients"></label>
+                <input type="text" id="ingredients" name="ingredients" placeholder="Ingredients...." style="margin-top: 20px;border-radius: 30px;"><br><br>
+                <input type="hidden" name="search_type" value="by_ingredients">
+                <input type="submit" value="Find Recipes">
+            </form>
+    
+            <form action="{{ url_for('recommend') }}" method="POST" id="cuisine-input" style="display: none;">
+                <label for="cuisine"></label>
+                <input type="text" id="cuisine" name="cuisine" placeholder="Cuisine...." style="margin-top: 20px;border-radius: 30px;"><br><br>
+                <input type="hidden" name="search_type" value="by_cuisine">
+                <input type="submit" value="Find Recipes">
+            </form>
+            <br>
+            <form action="{{ url_for('recommend') }}" method="POST" id="diet-input" style="display: none;">
+               <br>
+                <label for="diet" style="font-size: 18px;">Select Diet:</label>
+                <select id="diet" name="diet" style="margin-top: 10px; padding: 10px; font-size: 16px; border-radius: 5px; border: 1px solid #ccc; width: 250px;">
+                    <option value="Diabetic Friendly">Diabetic Friendly</option>
+                    <option value="Vegetarian">Vegetarian</option>
+                    <option value="High Protein Vegetarian">High Protein Vegetarian</option>
+                    <option value="Non Vegeterian">Non Vegeterian</option>
+                    <option value="High Protein Non Vegetarian">High Protein Non Vegetarian</option>
+                    <option value="Eggetarian">Eggetarian</option>
+                    <option value="Vegan">Vegan</option>
+                    <option value="No Onion No Garlic (Sattvic)">No Onion No Garlic (Sattvic)</option>
+                    <option value="Gluten Free">Gluten Free</option>
+                    <option value="Sugar Free Diet">Sugar Free Diet</option>
+                </select><br><br>
+                <input type="hidden" name="search_type" value="by_diet">
+                <input type="button" value="Find Recipes" onclick="findRecipes()" style="padding: 10px 20px; font-size: 16px; background-color: #007bff; color: white; border: none; border-radius: 5px; cursor: pointer; margin-top: 10px;">
+            </form>
+            
+        </div>
+    </div>
+    
+    
+
+    <div class="container mt-4 recipe-container" style="background-color: white;">
+        {% if recommended_recipes %}
+        <h2 style="color: rgb(0, 0, 0);">Recipes for your {{ ingredients }}:</h2>
+        <div class="recipe-cards">
+            {% for recipe in recommended_recipes %}
+            <div class="card mb-4 recipe-card">
+                <div class="card-body">
+                    <div style="flex: 1;">
+                        <img src="{{ recipe[3] }}" alt="Ingredient" style="width: 300px; height: 250px; object-fit: cover; float: left; margin-right: 10px;">
+                    </div>
+                    <div style="flex: 3;">
+                        <h5 class="card-title">{{ recipe[0] }}</h5>
+                        <p><strong>Diet:</strong> {{ recipe[4] }}</p>
+                        <p class="card-text">{{ recipe[2] }}</p>
+                        <a class="btn btn-primary float-right" href="{{ recipe[1] }}" target="_blank">Go to Recipe</a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        {% endif %}
+    </div>
+
+<br>
+
+<div class="background">
+    <div class="center">
+        <h1 class="feature-head">Features</h1>
+        <hr class="fancy-line"/>
+    </div>
+    <div class="row center">
+        <div class="col-xs-12 col-sm-6">
+            <div class="oval-img-container">
+                <img class="oval-img" src="\static\image\cuisine.jpg" alt="img"/>
+            </div>
+            <br>
+            <div class="feature-info">
+                <h3>Ingredients to Recipe</h3>
+                <p>Unlock the culinary possibilities with our Ingredients to Recipe feature! Whether you find yourself with limited ingredients or simply seeking inspiration, our platform guides you through a plethora of recipes tailored to your available ingredients. From simple yet satisfying dishes to gourmet delights, discover a world of flavor waiting to be explored. Let our collection of recipes ignite your creativity in the kitchen, turning everyday ingredients into memorable meals. Say goodbye to mealtime monotony and hello to a universe of culinary delights right at your fingertips.</p>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-6">
+            <div class="oval-img-container">
+                <img class="oval-img" src="\static\image\img2rec.png" alt="img"/>
+            </div>
+            <br>
+            <div class="feature-info">
+                <h3>Different Cuisines</h3>
+                <p>Embark on a culinary journey around the globe with our diverse collection of recipes from various cuisines. From the rich and spicy flavors of Mexican cuisine to the delicate and aromatic dishes of Thai cuisine, satisfy your cravings for authentic tastes from different cultures. Indulge in Italian pasta classics, explore the vibrant colors of Indian curries, or savor the simplicity of Japanese sushi. With our curated selection of recipes, you can experience the world's culinary diversity without leaving your kitchen. Expand your palate and delight your senses with every bite!</p>
+            </div>
+            
+        </div>
+    </div>
+    <br><br>
+</div>
+<div class="about-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <img src="\static\image\aboutimage.jpg" class="about-image" alt="About Image">
+            </div>
+            <div class="col-md-6">
+                <h2>About</h2>
+                <p style="size: 50px;">Most often, we get into a situation when we want to cook something delicious, however, we are short on ingredients at our home. Many times we see an image of a delicious looking dish and want to try it out, but we don't know how to cook it.</p>
+                <br>
+                <br>
+                <P style="size: 50px;">We, at Flavours of Choice, aim to make a user aware of the various dishes which can be cooked from available set of ingredients being input by a user. There may be times when a person desires for new, delicious, healthy, or maybe presentable cuisines and above all it necessarily be homemade as the possibilities to get one from outside might be restricted like in recent pandemic period (Covid-19).</P>
+            </div>
+        </div>
+    </div>
+</div>
+   
+
+
+    
+<footer style="background-color: black;" class="footer text-white py-4">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 footer-column">
+                <h5>About Us</h5>
+                <p>Our Website provides the recipe for your ingredients.</p>
+            </div>
+            <div class="col-md-3 footer-column">
+                <h5>Services</h5>
+                <ul class="list-unstyled">
+                    <li>Search by Ingredients</li>
+                    <li>Search by Cuisine</li>
+                </ul>
+            </div>
+            <div class="col-md-3 footer-column">
+                <h5>Contact Us</h5>
+                <p>Email: flavours_of_choice@gmail.com</p>
+                <p>Phone: +91 8220248579</p>
+            </div>
+            <div class="col-md-3 footer-column">
+                <h5>Social</h5>
+                <ul class="list-unstyled">
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Twitter</a></li>
+                    <li><a href="#">Instagram</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>

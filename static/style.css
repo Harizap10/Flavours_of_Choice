@@ -1,0 +1,249 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+#top-container{
+    max-width: 600px;
+    margin: px auto;
+    padding: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    
+}
+h1 {
+    color: white;
+    font-weight: bold;
+    font-family: Arial, sans-serif; /* Change the font family as needed */
+    text-align: center; /* Center the text */
+}
+
+
+.recipe-link {
+    color: #ffb347;
+    text-decoration: none;
+    margin-left: 10px;
+}
+
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+form {
+    text-align: center;
+}
+
+label {
+    font-weight: bold;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 10px;
+}
+.button-style {
+    background-color: #000000; /* Orange-slightly yellowish */
+    color: #ffffff; /* White text */
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.button-style:hover {
+    background-color: #ffb347; /* Darker shade on hover */
+}
+
+/* Add your existing CSS styles here */
+
+/* Center Alignment */
+.center {
+    text-align: center;
+}
+
+/* Heading Styles */
+.feature-head {
+    font-size: 36px; /* Adjust font size as needed */
+    font-weight: bold; /* Make the heading bold */
+    color: #333; /* Dark gray heading color */
+}
+
+/* Fancy Line Styles */
+.fancy-line {
+    border: none; /* Remove default border */
+    height: 2px; /* Set line height */
+    background-color: #007bff; /* Blue line color */
+    width: 50px; /* Set line width */
+    margin: 20px auto; /* Add margin for center alignment */
+}
+
+
+
+/* Oval Image */
+/* Oval Image */
+.oval-img {
+    display: block;
+    width: 500px; /* Adjust as needed */
+    height: 300px;
+    border-radius: 50%; /* Make it an oval shape */
+    margin: auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow for a raised effect */
+}
+
+/* Feature Info Container */
+.feature-info {
+    text-align: center;
+    background-color: rgb(255, 255, 255); /* Semi-transparent black background */
+    color: #000000; /* White text color */
+    padding: 20px; /* Add padding as needed */
+    box-sizing: border-box; /* Include padding in width calculation */
+}
+
+/* Feature Info Heading */
+.feature-info h3 {
+    font-size: 24px; /* Adjust font size as needed */
+    margin-bottom: 10px; /* Add margin below heading */
+}
+
+/* Feature Info Paragraph */
+.feature-info p {
+    font-size: 16px; /* Adjust font size as needed */
+    line-height: 1.5; /* Set line height for better readability */
+}
+
+body, html {
+    height: 100%;
+    margin: 0;
+}
+.video-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.video-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.95; /* Decrease transparency */
+}
+.content-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.navbar-nav .nav-link:hover {
+    text-decoration: underline;
+}
+
+.login-link:hover {
+    border: 1px solid white;
+}
+
+.footer {
+    background-color: black;
+    color: white;
+    padding: 60px 0;
+}
+
+.footer-column {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.footer h5 {
+    margin-bottom: 20px;
+}
+
+.footer p {
+    margin-bottom: 10px;
+}
+
+.footer ul li {
+    margin-bottom: 5px;
+}
+
+.footer ul li a {
+    color: #ccc;
+    text-decoration: none;
+}
+
+.footer ul li a:hover {
+    color: #fff;
+}
+
+/* CSS for the container */
+.recipe-container {
+    background-color:#555; /* Light yellowish background */
+    padding: 40px;
+    max-width: 90%;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Box shadow for depth */
+}
+
+/* CSS for the recipe cards */
+.recipe-card {
+    background-color:#faca87;
+    margin-bottom: 20px;
+}
+
+/* CSS for the card title */
+.recipe-card .card-title {
+    color: #333; /* Dark text color */
+    font-weight: bold;
+}
+
+/* CSS for the card text */
+.recipe-card .card-text {
+    color: #555; /* Medium text color */
+}
+
+/* CSS for the "Go to Recipe" button */
+.recipe-card .btn-primary {
+    background-color: #000000; /* Yellowish button background */
+    border-color: #ffffff; /* Yellowish button border color */
+    color: #ffffff; /* Dark button text color */
+}
+
+.recipe-card .btn-primary:hover {
+    background-color: #555; /* Lighter yellowish background on hover */
+    border-color: #555; /* Lighter yellowish border color on hover */
+    color: #fff; /* Dark button text color on hover */
+}

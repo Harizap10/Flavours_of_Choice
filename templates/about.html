@@ -1,0 +1,316 @@
+
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/static/image/_icon.png"type="image/x-icon">
+    <title>Flavours of Choice</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='about.css') }}">
+    
+    <!-- <link rel="stylesheet" href="\static\about.css"> -->
+    <style>
+
+        body, html {
+            font-family: 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+
+        @media (max-width: 768px) {
+            .footer-column {
+                margin-bottom: 20px;
+            }
+        }
+        .carousel-item img {
+            opacity: 0.85; /* Adjust the opacity value as needed */
+        }
+    </style>
+    <script src="/static/script.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <!-- Include Bootstrap JS -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <nav style="background-color: black;" class="navbar navbar-expand-lg ">
+        <div class="container">
+            <a class="navbar-brand" href="#" style="color: aliceblue;">
+                <img src="/static/image/_icon.png" width="30" height="30" class="d-inline-block align-top" alt="">
+                Flavours of Choice
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a style="color: aliceblue;" class="nav-link" href="index">Home </a>
+                    </li>
+                    <li class="nav-item">
+                        <a style="color: aliceblue;" class="nav-link" href="about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a style="color: aliceblue;" class="nav-link" href="dashboard">Feed<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a style="color: aliceblue;" class="nav-link" href="login">Login</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+ 
+    
+    <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#carouselExampleSlidesOnly" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleSlidesOnly" data-slide-to="1"></li>
+            <li data-target="#carouselExampleSlidesOnly" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="d-flex justify-content-center align-items-center" style="height: 400px;">
+                    <img src="static\image\slide_1.png" class="img-fluid" alt="First Slide">
+                    <div class="carousel-caption d-none d-md-block text-center">
+                        <h2 class="text-center">Unlock a World of Flavor</h2>
+                        <p class="text-center">At Flavours of Choice, we believe in unlocking a world of flavor for every palate. With our platform, explore the vast landscape of culinary delights and embark on a journey of taste exploration like never before.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="d-flex justify-content-center align-items-center" style="height: 400px;">
+                    <img src="static\image\slide_4.png" class="img-fluid" alt="Second Slide">
+                    <div class="carousel-caption d-none d-md-block text-center">
+                        <h2 class="text-center">Simplify Your Culinary Adventure</h2>
+                        <p class="text-center">Experience the joy of cooking simplified with Flavours of Choice. Our mission is to empower food enthusiasts of all levels to create delicious meals effortlessly. Say goodbye to culinary complexities and hello to delightful simplicity!"</p>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="d-flex justify-content-center align-items-center" style="height: 400px;">
+                    <img src="static\image\slide_3.png" class="img-fluid" alt="Third Slide">
+                    <div class="carousel-caption d-none d-md-block text-center">
+                        <h2 class="text-center">Personalized Culinary Experience</h2>
+                        <p class="text-center">Discover the art of personalized cooking with Flavours of Choice. Our platform offers tailored recipe recommendations and curated culinary experiences, ensuring that every dish reflects your unique taste preferences and culinary aspirations.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+    
+    
+    
+    
+    <script>
+        $(document).ready(function(){
+            // Activate the carousel
+            $('.carousel').carousel();
+    
+            // Set interval for carousel to slide every second
+            setInterval(function(){
+                $('.carousel').carousel('next');
+            }, 3000); // Change the interval (in milliseconds) as needed
+        });
+    </script>
+    
+
+ 
+
+    <div class="about-section"  style="border-top-width: 1cap;">
+        <div class="container mt-4">
+            <h1>About Us</h1>
+            <div>
+
+            </div>
+            
+            <div class="row">
+                <div class="col-md-6">
+                    <img src="static\image\about_img.jpg" class="img-fluid rounded mb-3" alt="Company Logo" style="width: 80%; height:60%;">
+                    <h3>Flavours of Choice</h3>
+                    <p>At Flavours of Choice, we're passionate about simplifying the culinary experience. Our mission is to empower food enthusiasts of all levels to explore new flavors and create delicious meals with ease. Leveraging the latest advancements in machine learning, we've developed a unique platform that transforms the way people discover and engage with recipes. By combining a vast dataset of curated recipes with sophisticated algorithms, we enable users to effortlessly find recipes tailored to their preferences, whether by inputting ingredients they have on hand or selecting from a diverse array of options. What sets us apart is our commitment to delivering more than just recipes – we strive to enrich the cooking journey by providing personalized recommendations and generating descriptive paragraphs that capture the essence of each dish. Join us on this culinary adventure and unlock a world of flavor at your fingertips.</p>
+                </div>
+                
+              
+              <div class="col-md-6">
+                <div class="card-deck">
+                  <!-- Card 1 -->
+                  <div class="card mb-4">
+                    <img src="\static\developers\Hariprasath.jpg" class="card-img-top" alt="Author 1">
+                    <div class="card-body">
+                      <h5 class="card-title">Hari Prasath C</h5>
+                      <p class="card-text">Hari Prasath a frontend developer from Kamaraj College of Engineering and Technology.</p>
+                    </div>
+                  </div>
+                  <!-- Card 2 -->
+                  <div class="card mb-4">
+                    <img src="\static\developers\aakaash.jpeg" class="card-img-top" alt="Author 2">
+                    <div class="card-body">
+                      <h5 class="card-title">Aakaash Kumar M</h5>
+                      <p class="card-text">Aakaash kumar a backend developer from Kamaraj College of Engineering and Technology.</p>
+                    </div>
+                  </div>
+                  <!-- Card 3 -->
+                  <div class="card mb-4">
+                    <img src="\static\developers\shiyam.jpeg" class="card-img-top" alt="Author 3">
+                    <div class="card-body">
+                      <h5 class="card-title">Shiyam A</h5>
+                      <p class="card-text">Shiyam a UI/UX designer from Kamaraj College of Engineering and Technology.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          
+            <!-- Modal to display item details -->
+            <div class="modal fade" id="itemModal">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title">Item Details</h5>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  </div>
+                  <div class="modal-body">
+                    <p id="itemDetails">Details will be displayed here</p>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          
+    </div>
+    </div>
+
+    <div class="ftco-section">
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-md-6 text-center mb-5">
+					<h1 class="heading-section">Contact Us</h1>
+				</div>
+			</div>
+			<div class="row justify-content-center">
+				<div class="col-lg-10 col-md-12">
+					<div class="wrapper">
+						<div class="row no-gutters">
+							<div class="col-md-7 d-flex align-items-stretch">
+								<div class="contact-wrap w-100 p-md-5 p-4">
+									<h3 class="mb-4">Get in touch</h3>
+									<div id="form-message-warning" class="mb-4"></div> 
+				      		<div id="form-message-success" class="mb-4">
+				            Your message was sent, thank you!
+				      		</div>
+									<form method="POST" id="contactForm" name="contactForm">
+										<div class="row">
+											<div class="col-md-6">
+												<div class="form-group">
+													<input type="text" class="form-control" name="name" id="name" placeholder="Name">
+												</div>
+											</div>
+											<div class="col-md-6"> 
+												<div class="form-group">
+													<input type="email" class="form-control" name="email" id="email" placeholder="Email">
+												</div>
+											</div>
+											<div class="col-md-12">
+												<div class="form-group">
+													<input type="text" class="form-control" name="subject" id="subject" placeholder="Subject">
+												</div>
+											</div>
+											<div class="col-md-12">
+												<div class="form-group">
+													<textarea name="message" class="form-control" id="message" cols="30" rows="7" placeholder="Message"></textarea>
+												</div>
+											</div>
+											<div class="col-md-12">
+												<div class="form-group">
+													<input type="submit" value="Send Message" class="btn btn-primary">
+													<div class="submitting"></div>
+												</div>
+											</div>
+										</div>
+									</form>
+								</div>
+							</div>
+							<div class="col-md-5 d-flex align-items-stretch">
+								<div class="info-wrap w-100 p-lg-5 p-4" style="background-color: #ffb347;">
+									<h3 class="mb-4 mt-md-4">Contact us</h3>
+				        	<div class="dbox w-100 d-flex align-items-start">
+				        		<div class="icon d-flex align-items-center justify-content-center">
+				        			<span class="fa fa-map-marker"></span>
+				        		</div>
+				        		<div class="text pl-3">
+					            <p><span>Address:</span> 198 West 21th Street, Suite 721 New York NY 10016</p>
+					          </div>
+				          </div>
+				        	<div class="dbox w-100 d-flex align-items-center">
+				        		<div class="icon d-flex align-items-center justify-content-center">
+				        			<span class="fa fa-phone"></span>
+				        		</div>
+				        		<div class="text pl-3">
+					            <p><span>Phone:</span> <a href="tel://1234567920">+ 1235 2355 98</a></p>
+					          </div>
+				          </div>
+				        	<div class="dbox w-100 d-flex align-items-center">
+				        		<div class="icon d-flex align-items-center justify-content-center">
+				        			<span class="fa fa-paper-plane"></span>
+				        		</div>
+				        		<div class="text pl-3">
+					            <p><span>Email:</span> <a href="mailto:info@yoursite.com">info@yoursite.com</a></p>
+					          </div>
+				          </div>
+				        	<div class="dbox w-100 d-flex align-items-center">
+				        		<div class="icon d-flex align-items-center justify-content-center">
+				        			<span class="fa fa-globe"></span>
+				        		</div>
+				        		<div class="text pl-3">
+					            <p><span>Website</span> <a href="#">yoursite.com</a></p>
+					          </div>
+				          </div>
+			          </div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+    <div class="eee">
+
+    </div>
+
+    
+    <footer style="background-color: black;" class="footer text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 footer-column">
+                    <h5>About Us</h5>
+                    <p>Our Website provides the recipe for your ingredients.</p>
+                </div>
+                <div class="col-md-3 footer-column">
+                    <h5>Services</h5>
+                    <ul class="list-unstyled">
+                        <li>Search by Ingredients</li>
+                        <li>Search by Cuisine</li>
+                    </ul>
+                </div>
+                <div class="col-md-3 footer-column">
+                    <h5>Contact Us</h5>
+                    <p>Email: flavours_of_choice@gmail.com</p>
+                    <p>Phone: +91 8220248579</p>
+                </div>
+                <div class="col-md-3 footer-column">
+                    <h5>Social</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Facebook</a></li>
+                        <li><a href="#">Twitter</a></li>
+                        <li><a href="#">Instagram</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+</body>
+</html>
